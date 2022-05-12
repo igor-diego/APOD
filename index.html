@@ -13,19 +13,21 @@
 
     <header>
         <h1 class="titulo">Astronomy Picture of the Day (Apod)</h1>
+
+
     </header>
 
-    <main>
-        <p class="paragrado">insira uma data para obter uma imagem ou video do respectivo dia.</p>
-        <img class="imagem" id="img" alt="imagem apod nasa" src="">
-        <div>
-
-            <input id="data" type="date"  required>
-            <p class="paragrafo-none">Data invalida. Digite uma data valida</p>
-            <button id='btn'>Enviar</button>
-            <p id="paragrado-1"></p>
-            <p id="paragrado-2"></p>
-
+    <main class="principal">
+        <h2 class="paragrado">insira uma data entre julho de 1995 até a data atual para obter uma imagem ou video do respectivo dia.</h2>
+        
+        <div class="conteudo">
+            
+            <input id="data" type="date" min="" required >
+            <button id='btn'>Pesquisar</button>
+            <img class="imagem" id="img" alt="" src="">
+            <h2 class="paragrafos" id="subtitulo"></h2>
+            <p class="paragrafos"  id="explanation"></p>
+            <p class="paragrafos"  id="copy"></p>
         </div>
     </main>
 
@@ -36,5 +38,6 @@
 </body>
 
 </html>
+
 
 
