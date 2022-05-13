@@ -38,7 +38,7 @@ function exibir(result) {
                 $('#img').show()
             }else {
                 
-                // video.attr(`<iframe class="img" src="${result.url}?autoplay=1&mute=1"></iframe>`)
+                
                 video.attr('src', result.url)
                 $('#video').css('width', '500px')
                 $('#video').css('height', '300px')
@@ -46,9 +46,7 @@ function exibir(result) {
                 $('#video').show()
                 $('#img').hide()
 
-                // (`<iframe class="img" src="${result.url}?autoplay=1&mute=1"></iframe>`)
-                // video.html(`<iframe class="img" src="${result.url}?autoplay=1&mute=1"></iframe>`)
-                //`<iframe class="img" src="${result.url}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+               
             }
 
 }
