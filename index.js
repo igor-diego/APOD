@@ -23,6 +23,7 @@ function exibir(result) {
     const explanation = $('#explanation')
     const copy = $('#copy')
     const imagem = $('#img')
+    const video = $('#video')
     
         $('#img').attr('src',result.url)
             subtitulo.html(`${result.title}`)
@@ -30,10 +31,27 @@ function exibir(result) {
             copy.html(`${result.copyright}`)
 
             if(result.media_type == 'image') {
-                imagem.html(`<img class="img" scr="${result.url}">`)
-                $('#img').css('width', '400px', 'height', '300px')
+                imagem.html(`<img class="img" scr="${result.url}"/>`)
+                $('#img').css('width', '500px')
+                $('#img').css('height', '300px')
+                $('#video').hide()
+                $('#img').show()
             }else {
-                imagem.html(`<iframe class="img" src="${result.url}?autoplay=1&mute=1"></iframe>`)
                 
+                // video.attr(`<iframe class="img" src="${result.url}?autoplay=1&mute=1"></iframe>`)
+                video.attr('src', result.url)
+                $('#video').css('width', '500px')
+                $('#video').css('height', '300px')
+                console.log(result);
+                $('#video').show()
+                $('#img').hide()
+
+                // (`<iframe class="img" src="${result.url}?autoplay=1&mute=1"></iframe>`)
+                // video.html(`<iframe class="img" src="${result.url}?autoplay=1&mute=1"></iframe>`)
+                //`<iframe class="img" src="${result.url}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
             }
+
 }
+
+$('#video').hide()
+$('#img').hide()
