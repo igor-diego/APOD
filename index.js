@@ -31,17 +31,16 @@ function exibir(result) {
             copy.html(`${result.copyright}`)
 
             if(result.media_type == 'image') {
-                imagem.html(`<img class="img" scr="${result.url}"/>`)
-                $('#img').css('width', '500px')
-                $('#img').css('height', '300px')
+                imagem.html(`<img class="imagem" scr="${result.url}"/>`)
+                // $('#img').css('width', '500px')
+                // $('#img').css('height', '300px')
                 $('#video').hide()
                 $('#img').show()
             }else {
                 
-                
                 video.attr('src', result.url)
-                $('#video').css('width', '500px')
-                $('#video').css('height', '300px')
+                // $('#video').css('width', '500px')
+                // $('#video').css('height', '300px')
                 console.log(result);
                 $('#video').show()
                 $('#img').hide()
